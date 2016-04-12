@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Project Electron</title>
+
+		<meta name="description" content="building infrastructure for digital records">
+		<meta name="author" content="Hillel Arnold">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/electron.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Introducing Project Electron</h1>
+					<h4>building infrastructure for digital records</h4>
+					<p>
+						<small>a presentation for the Ford Foundation Information Management team / April 13, 2016</small>
+					</p>
+				</section>
+
+				<section>
+					<h1>Where we&rsquo;re at</h1>
+				</section>
+
+				<section data-background="img/systems-diagram.png">&nbsp;</section>
+
+				<section>
+					<h2>Siloed systems &amp; data</h2>
+					<p class="fragment">manual data manipulation</p>
+					<p class="fragment">update mechanisms for data</p>
+					<p class="fragment">breakage points</p>
+					<p class="fragment">technical debt</p>
+				</section>
+
+				<section>
+					<h2>Born-digital transfers</h2>
+					<p class="fragment">scale</p>
+					<p class="fragment">automation</p>
+				</section>
+
+				<section>
+					<h2>Storage &amp; management</h2>
+					<p class="fragment">persist bitstreams and metadata</p>
+					<p class="fragment">manage archival processes</p>
+				</section>
+
+				<section>
+					<h2>Interfaces</h2>
+					<p class="fragment">changing technologies</p>
+					<p class="fragment">curated exhibits</p>
+					<p class="fragment">administration interfaces</p>
+				</section>
+
+				<section data-background="img/worse-than-i-thought.png">&nbsp;</section>
+
+				<section>
+					<h1>Where we want to go</h1>
+				</section>
+
+				<section data-background="img/objective.png">&nbsp;</section>
+
+				<section>
+					<h2>Project Electron</h2>
+					<p>data in motion</p>
+				</section>
+
+				<section>
+					<h2>Repository + REST API</h2>
+				</section>
+
+				<section data-background="img/project-electron.png">&nbsp;</section>
+
+				<section>
+					<h2>REST API</h2>
+					<p>a way for machines to talk to each other using common infrastructure and protocols</p>
+				</section>
+
+				<section data-background="img/processing-units.png">&nbsp;</section>
+
+				<section>
+					<h3>Internal systems</h3>
+					<p class="fragment">support current functions &amp; use cases</p>
+					<p class="fragment">provide a framework for future needs</p>
+				</section>
+
+				<section>
+					<h3>External systems</h3>
+					<p class="fragment">ingest</p>
+					<p class="fragment">discovery</p>
+				</section>
+
+				<section>
+					<h2>Repository</h2>
+					<p>a place to store and manage digital records</p>
+				</section>
+
+				<section data-background="img/central-processing.png">&nbsp;</section>
+
+				<section>
+					<h3>Repository</h3>
+					<p class="fragment">platform for archival functions</p>
+					<p class="fragment">looking at Fedora/Hydra</p>
+				</section>
+
+				<section>
+					<h2>Additional components</h2>
+					<p class="fragment">ingest tools &amp; processes</p>
+					<p class="fragment">sync &amp; update mechanisms/logic</p>
+					<p class="fragment">administration &amp; discovery interfaces</p>
+				</section>
+
+				<section>
+					<h1>How we&rsquo;ll get there</h1>
+				</section>
+
+				<section data-background="img/how-it-works.png">&nbsp;</section>
+
+				<section>
+					<h2>Partnerships</h2>
+					<p class="fragment">peer institutions</p>
+					<p class="fragment">Marist College</p>
+					<p class="fragment">donor organizations</p>
+					<p class="fragment">...meaning you!</p>
+				</section>
+
+				<section>
+					<h1>Here&rsquo;s where you come in</h1>
+				</section>
+
+				<section data-background="img/high-tech-marvels.png">&nbsp;</section>
+
+				<section>
+					<h2>Use cases &amp; requirements</h2>
+					<p class="fragment">ingest</p>
+					<p class="fragment">discovery</p>
+				</section>
+
+				<section>
+					<h2>Data modeling</h2>
+					<p class="fragment">data elements and serialization(s)</p>
+					<p class="fragment">grant records<span class="fragment">...and more?</span></p>
+					<p class="fragment">basis for a generalized model?</p>
+					<p class="fragment">compatibility with other efforts</p>
+				</section>
+
+				<section>
+					<h2>Timeline</h2>
+					<p class="fragment">TBD<span class="fragment">...but soon!</span></p>
+					<p class="fragment">dependent partially on your timeline</p>
+				</section>
+
+				<section data-background="img/the-end.png">&nbsp;</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
