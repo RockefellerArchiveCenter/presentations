@@ -5,9 +5,7 @@
  * This theme is Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
  * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,450,400italic,700italic);
-@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Kameron:400,700);
 .reveal .slide-background {
   background-size: contain; }
 
@@ -15,19 +13,27 @@
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #fff;
-  background-color: #fff; }
+  background: #0374B4;
+  background-color: #0374B4; }
 
 .reveal {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Georgia", Times, serif;
   font-size: 36px;
   font-weight: normal;
-  color: #000; }
+  color: #fff; }
 
 ::selection {
   color: #fff;
   background: rgba(0, 0, 0, 0.99);
   text-shadow: none; }
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides .category {
+  text-align: center;
+}
 
 .reveal .slides > section,
 .reveal .slides > section > section {
@@ -44,8 +50,8 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #1462AF;
-  font-family: "Raleway", Arial, sans-serif;
+  color: #FFCE00;
+  font-family: "Kameron", Times, serif;
   font-weight: bold;
   line-height: 1.2;
   letter-spacing: normal;
@@ -54,10 +60,20 @@ body {
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 4em; }
+  font-size: 3.8em; }
+
+.reveal .title h1 {
+  font-size: 2.5em; }
 
 .reveal h2 {
   font-size: 2.6em; }
+
+  .reveal .category h2 {
+    color: #FFCE00;
+    border-bottom: 1px solid #FFCE00;
+    font-size: 2em;
+    text-transform: uppercase;
+  }
 
 .reveal h3 {
   font-size: 2em; }
@@ -68,12 +84,32 @@ body {
 .reveal h1 {
   text-shadow: none; }
 
+  .reveal .category h1, .reveal .title h1 {
+    color: #fff;
+  }
+
 /*********************************************
  * OTHER
  *********************************************/
 .reveal p {
   margin: 20px 0;
-  line-height: 1.3; }
+  line-height: 1.3;
+  font-size: 1.5em;
+ }
+
+ .reveal .category p {
+   font-size: 2em;
+ }
+
+ .reveal .title p {
+   color: #FFCE00;
+   font-size: 1em;
+ }
+
+.reveal p.cite {
+   font-size: 1em;
+   color: #FFCE00;
+ }
 
 /* Ensure certain elements are never larger than the slide itself */
 .reveal img,
