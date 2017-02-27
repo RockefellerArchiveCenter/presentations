@@ -31,6 +31,10 @@ body {
   text-align: left;
 }
 
+.reveal .slides .category {
+  text-align: center;
+}
+
 .reveal .slides > section,
 .reveal .slides > section > section {
   line-height: 1.3;
@@ -64,6 +68,13 @@ body {
 .reveal h2 {
   font-size: 2.6em; }
 
+  .reveal .category h2 {
+    color: #FFCE00;
+    border-bottom: 1px solid #FFCE00;
+    font-size: 2em;
+    text-transform: uppercase;
+  }
+
 .reveal h3 {
   font-size: 2em; }
 
@@ -73,7 +84,7 @@ body {
 .reveal h1 {
   text-shadow: none; }
 
-  .reveal .category h1, .reveal .category h2, .reveal .category h3, .reveal .title h1 {
+  .reveal .category h1, .reveal .title h1 {
     color: #fff;
   }
 
@@ -87,8 +98,6 @@ body {
  }
 
  .reveal .category p {
-   color: #FFCE00;
-   border-bottom: 1px solid #FFCE00;
    font-size: 2em;
  }
 
