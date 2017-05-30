@@ -18,4 +18,4 @@ Rockefeller Archive Center's D-Team
 
 ## License
 
-This content is licensed CC-BY.
+This content is licensed [CC-BY](https://creativecommons.org/licenses/by/2.0/).
