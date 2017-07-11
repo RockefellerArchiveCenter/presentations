@@ -64,11 +64,11 @@ body {
   .reveal .category h2 {
     color: #FFF;
     border-bottom: 1px solid #FEC601;
-    /*font-size: 2em;*/
+    font-size: 1.8em;
   }
 
 .reveal h3 {
-  font-size: 2em;
+  font-size: 1.5em;
   color: #FEC601; }
 
 .reveal h4 {
@@ -87,11 +87,7 @@ body {
 .reveal p {
   margin: 20px 0;
   line-height: 1.3;
-  font-size: 1.5em;
- }
-
- .reveal .category p {
-   font-size: 2em;
+  font-size: 1.2em;
  }
 
  .reveal .title p {
@@ -256,8 +252,6 @@ body {
  * IMAGES
  *********************************************/
 .reveal section img {
-  margin: 15px 0px;
-  background: rgba(255, 255, 255, 0.12);
   border: 4px solid #000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
