@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Archivematica-ArchivesSpace DIP Upload Integration</title>
+
+		<meta name="description" content="Presentation at Archivematica Camp Baltimore, June 2018">
+		<meta name="author" content="Bonnie Gordon, Rockefeller Archive Center">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/archivematicacamp.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section class="title">
+					<h1>Archivematica-ArchivesSpace DIP Upload Integration</h1>
+				</section>
+				
+				<section class="category">
+					<h2>An Archivematica DIP</h2>
+					<img class="plain" src="img/dip_structure.png"/>
+				</section>
+				
+				<section>
+					<h2>Use case</h2>
+					<ul>
+					<li>We needed to link a large volume of digital objects to existing description</li>
+					<li>We needed to create rights statements that are machine actionable</li>
+					<li>We needed the process to be scalable</li>
+				</ul>
+				</section>
+				
+				<section>
+					<h2>What does this integration do?</h2>
+					<ul>
+					<li>Rights information and technical metadata is passed from Archivematica to ArchivesSpace through automated processes</li>
+					<li>This automated recording of DIP information in ArchivesSpace can be done either through manual linking or through filename matching</li>
+				</ul>
+				</section>
+				
+				<section>
+					<h2>PREMIS Rights Statement Mapping</h2>
+					<ul>	
+				<li><strong>Publish:</strong> Set as TRUE or FALSE based on "publish" act.</li>
+				<li><strong>Restrictions?:</strong> Set as TRUE or FALSE based on based on "disseminate" act.</li>
+				<li><strong>Conditions Governing Access note:</strong> Derive from PREMIS rightsGrantedNote based on "disseminate" act. (This can also be set in the Archivematica administration settings.)</li>
+				<li><strong>Conditions Governing Use note:</strong> Derive from PREMIS rightsGrantedNote based on "publish" act. (This can also be set in the Archivematica administration settings.)</li>
+				</ul>
+				</section>
+				
+				<section class="category">
+					<h2>ArchivesSpace DAO</h2>
+				</section>
+				
+				<section class="category">
+					<h2>Configurations</h2>
+				</section>
+				
+				<section class="category">
+					<h2>Manual Matching</h2>
+				</section>
+				
+				<section class="category">
+					<h2>Automated Matching</h2>
+				</section>
+
+
+				<section>
+					<table>
+					<thead>
+					<tr>
+					<th>file</th>
+					<th>basis</th>
+					<th>status</th>
+					<th>determination_date</th>
+					<th>jurisdiction</th>
+					<th>start_date</th>
+					<th>end_date</th>
+					<th>terms</th>
+					<th>citation</th>
+					<th>note</th>
+					<th>grant_act</th>
+					<th>grant_restriction</th>
+					<th>grant_start_date</th>
+					<th>grant_end_date</th>
+					<th>grant_note</th>
+					<th>doc_id_type</th>
+					<th>doc_id_value</th>
+					<th>doc_id_role</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td>r2fp9q4b_004.tif</td>
+					<td>copyright</td>
+					<td>copyrighted</td>
+					<td>3/15/18</td>
+					<td>us</td>
+					<td>1/1/00</td>
+					<td>open</td>
+					<td></td>
+					<td></td>
+					<td>Copyright note</td>
+					<td>publish</td>
+					<td>Allow</td>
+					<td>1/1/00</td>
+					<td>open</td>
+					<td>Grant note</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					</tr>
+					<tr>
+					<td>r2fp9q4b_004.tif</td>
+					<td>donor</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>1/1/90</td>
+					<td>open</td>
+					<td></td>
+					<td></td>
+					<td>Donor note</td>
+					<td>disseminate</td>
+					<td>Allow</td>
+					<td>1/1/90</td>
+					<td>open</td>
+					<td>Grant note</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					</tr>
+					<tr>
+					<td>r2fp9q4b_001.tif</td>
+					<td>copyright</td>
+					<td>copyrighted</td>
+					<td>3/15/18</td>
+					<td>us</td>
+					<td>1/1/00</td>
+					<td>open</td>
+					<td></td>
+					<td></td>
+					<td>Copyright note</td>
+					<td>publish</td>
+					<td>Allow</td>
+					<td>1/1/00</td>
+					<td>open</td>
+					<td>Grant note</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					</tr>
+					<tr>
+					<td>r2fp9q4b_001.tif</td>
+					<td>donor</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>1/1/90</td>
+					<td>open</td>
+					<td></td>
+					<td></td>
+					<td>Donor note</td>
+					<td>disseminate</td>
+					<td>Allow</td>
+					<td>1/1/90</td>
+					<td>open</td>
+					<td>Grant note</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					</tr>
+					<tr>
+					<td>r2fp9q4b_002.tif</td>
+					<td>copyright</td>
+					<td>copyrighted</td>
+					<td>3/15/18</td>
+					<td>us</td>
+					<td>1/1/00</td>
+					<td>open</td>
+					<td></td>
+					<td></td>
+					<td>Copyright note</td>
+					<td>publish</td>
+					<td>Allow</td>
+					<td>1/1/00</td>
+					<td>open</td>
+					<td>Grant note</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					</tr>
+					<tr>
+					<td>r2fp9q4b_002.tif</td>
+					<td>donor</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>1/1/90</td>
+					<td>open</td>
+					<td></td>
+					<td></td>
+					<td>Donor note</td>
+					<td>disseminate</td>
+					<td>Allow</td>
+					<td>1/1/90</td>
+					<td>open</td>
+					<td>Grant note</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					</tr>
+					<tr>
+					<td>r2fp9q4b_003.tif</td>
+					<td>copyright</td>
+					<td>copyrighted</td>
+					<td>3/15/18</td>
+					<td>us</td>
+					<td>1/1/00</td>
+					<td>open</td>
+					<td></td>
+					<td></td>
+					<td>Copyright note</td>
+					<td>publish</td>
+					<td>Allow</td>
+					<td>1/1/00</td>
+					<td>open</td>
+					<td>Grant note</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					</tr>
+					<tr>
+					<td>r2fp9q4b_003.tif</td>
+					<td>donor</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>1/1/90</td>
+					<td>open</td>
+					<td></td>
+					<td></td>
+					<td>Donor note</td>
+					<td>disseminate</td>
+					<td>Allow</td>
+					<td>1/1/90</td>
+					<td>open</td>
+					<td>Grant note</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					</tr></tbody></table>
+				</section>
+				
+				<section>
+					<table>
+					<tbody>
+					<tr>
+					<td>objects/scan_001.tif</td>
+					<td>8e7545212966d0256a6ac70d81db6a6d</td>
+					</tr>
+					<tr>
+					<td>objects/scan_002.tif</td>
+					<td>8e7545212966d0256a6ac70d81db6a6d</td>
+					</tr>
+					<tr>
+					<td>objects/scan_003.tif</td>
+					<td>8e7545212966d0256a6ac70d81db6a6d</td>
+					</tr>
+				</tbody></table>
+				</section>
+				
+				<section class="category">
+					<h2>Where We Are Now</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'none', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
